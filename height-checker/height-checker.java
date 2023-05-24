@@ -22,7 +22,7 @@ class Solution {
             }          
         }
         
-        // 몇번 swap 됐는지 카운트하여 출력        
+        // swap 된 요소가 몇개인지 카운트하여 출력        
         int count = 0;
         for(int i = 0; i < heights.length; i++) {
             if(heights[i] != heightsCopy[i]) {
