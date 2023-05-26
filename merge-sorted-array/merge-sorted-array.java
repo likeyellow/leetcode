@@ -17,7 +17,7 @@ class Solution {
             if(p1 >=0 && nums1[p1] > nums2[p2]){
                 nums1[i--] = nums1[p1--];
             } 
-            else{
+            else{ // nums2 배열이 nums1보다 더 클때
                 nums1[i--] = nums2[p2--];
             }
         }
