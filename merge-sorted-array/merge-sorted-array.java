@@ -12,7 +12,7 @@ class Solution {
         }
         */
         
-        int p1 = m-1 , p2 = n-1 ,i = m+n-1;
+        int p1 = m-1 , p2 = n-1 ,i = m+n-1;  // 각 배열의 가장 마지막 인덱스
         while(p2 >=0 ){
             if(p1 >=0 && nums1[p1] > nums2[p2]){
                 nums1[i--] = nums1[p1--];
