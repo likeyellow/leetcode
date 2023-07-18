@@ -11,7 +11,9 @@ class Solution {
                 
         //         for(int j = length; j >= i ; j--) {
         //             arr[j] = arr[j-1];
-        //             System.out.println(Arrays.toString(arr));;                    
+        //             System.out.println("j = " +j);
+        //             System.out.println("안쪽 i = " +i);
+        //             System.out.println(Arrays.toString(arr));                  
         //         }
         //     }
         // }
