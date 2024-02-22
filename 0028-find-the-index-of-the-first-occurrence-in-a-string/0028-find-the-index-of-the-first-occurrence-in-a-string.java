@@ -1,23 +1,15 @@
 class Solution {
-    private int findIndex = 0;
-    private boolean isMatch;
-
+    private int startIndex = 0;
+    private int findIndex;
+    
     public int strStr(String haystack, String needle) {
-        for(int i = 0; i < haystack.length(); i++) {
-            isMatch = true;
-            findIndex = i;
-            for(int j = 0; j < needle.length(); j++) {
-                if(i + j >= haystack.length() || haystack.charAt(i + j) != needle.charAt(j)) {
-                    isMatch = false;
-                    break;
-                }
-            }
-            if(isMatch) {
-                findIndex = i;
-                i += needle.length() - 1;
+        while(true) {
+            findIndex = haystack.indexOf(needle, startIndex);
+            if(findIndex < 0)
                 break;
-            }
+            startIndex = findIndex + needle.length();
+            break;
         }
-        return isMatch? findIndex : -1; 
+        return findIndex;
     }
 }
