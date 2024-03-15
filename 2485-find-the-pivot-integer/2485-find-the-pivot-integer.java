@@ -9,7 +9,7 @@ class Solution {
         if(n <= 1) return n;
         
         for(int i = n/2; i < n-1; i++) {
-            int sum1 = preSum[i-1];
+            int sum1 = preSum[i-1];           // preSum[i-1]: i이전까지 숫자들의 합 
             int sum2 = preSum[n] - preSum[i]; // preSum[n]: 1~n까지 숫자들의 합
                                               // preSum[i]: 1~i까지 숫자들의 합      
             if(sum1 == sum2) {                // 따라서 sum2 는 i 이후의 숫자들의 합
