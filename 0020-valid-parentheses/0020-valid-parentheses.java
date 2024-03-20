@@ -13,7 +13,7 @@ class Solution {
             if(ch == '(' || ch == '[' || ch == '{') {
                 st.push(ch);
             } else {
-                if(st.isEmpty()) { //   }[] 이렇게 들어오는 경우 } 에 대한 예이므로 false 
+                if(st.isEmpty()) { //   }[] 이렇게 들어오는 경우 처음괄호 } 에 대한 예이므로 false 
                     return false;
                 }
                 if(st.peek() == '(' && ch == ')') {
@@ -22,7 +22,7 @@ class Solution {
                     st.pop();
                 } else if(st.peek() == '{' && ch == '}') {
                     st.pop();
-                } else return false;
+                } else return false; // ([) 이렇게 들어오는 경우 중간괄호 [ 에 대한 처리
             }
         }
         return st.isEmpty();
