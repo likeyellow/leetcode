@@ -1,5 +1,6 @@
 class Solution {
     public int singleNumber(int[] nums) {
+        /*
         Set<Integer> set = new HashSet<>();
         
         for(int n : nums) {
@@ -11,5 +12,12 @@ class Solution {
         for(int i : set)
             return i;
         return -1;
+        */
+        
+        int result = 0;
+        for(int n : nums) {
+            result = result ^ n;
+        }
+        return result;
     }
 }
