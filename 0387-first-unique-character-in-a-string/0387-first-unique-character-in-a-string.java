@@ -8,7 +8,8 @@ class Solution {
             map.put(ch, map.getOrDefault(ch, 0) + 1);
         }
         
-        Set<Integer> set = new HashSet<>(map.values());
+        //Set<Integer> set = new HashSet<>(map.values());
+        
         for(int i = 0; i < s.length(); i++) {
             if(map.get(s.charAt(i)) == 1)
                 return i;
