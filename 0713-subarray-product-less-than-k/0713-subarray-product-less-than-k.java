@@ -5,7 +5,7 @@ class Solution {
         int left = 0;
         int right = 0;
         
-        if(k <= 1) return 0;
+        if(k <= 1) return 0; // [1, 1, 1], k=1 일때 방지
         
         while(right < nums.length) {
 
