@@ -1,7 +1,7 @@
 class Solution {
     public boolean validWordAbbreviation(String word, String abbr) {
         
-        int curr = -1;
+        // int curr = -1;
         int i = 0;
         int j = 0;
         
