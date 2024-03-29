@@ -1,21 +1,21 @@
 class Solution {
     public String reverseWords(String s) {
         char[] words = s.toCharArray();
-        int right = -1;
+        int spaceIdx = -1; // 마지막으로 찾은 공백의 인덱스를 저장하는 변수 초기화
         
-        for(int i = 0; i <= s.length(); i++) {
-            if(i == s.length() || words[i] == ' ') {
-                int left = right + 1;
-                int end = i - 1;
+        for(int now = 0; now <= s.length(); now++) {
+            if(now == s.length() || words[now] == ' ') {
+                int start = spaceIdx + 1;
+                int end = now - 1;
                 
-                while(left < end) {
-                    char tmp = words[left];
-                    words[left] = words[end];
+                while(start < end) {
+                    char tmp = words[start];
+                    words[start] = words[end];
                     words[end] = tmp;
-                    left++;
+                    start++;
                     end--;
                 }
-                right = i;
+                spaceIdx = now;
             }
         }
         return new String(words);
