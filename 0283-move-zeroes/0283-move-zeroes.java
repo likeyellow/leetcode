@@ -8,8 +8,8 @@ class Solution {
                 find++;
             }
         }
-        for(;find<nums.length; find++) {
-            nums[find] = 0;
+        for(int j = find; j < nums.length; j++) {
+            nums[j] = 0;
         }
     }
 }
