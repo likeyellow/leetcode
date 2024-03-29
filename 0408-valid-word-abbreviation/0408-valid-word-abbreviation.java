@@ -12,9 +12,12 @@ class Solution {
                 j++;
                 continue;
             }
+            // abbr의 숫자가 0 < x <= 9 까지 한자리수 일때
             if(abbr.charAt(j) == '0' || !Character.isDigit(abbr.charAt(j))) {
                 return false;
             }
+            
+            // abbr의 숫자가 2자리 이상일때
             int num = 0;
             while(j < abbr.length() && Character.isDigit(abbr.charAt(j))) {
                 num = 10 * num + (abbr.charAt(j) - '0');
