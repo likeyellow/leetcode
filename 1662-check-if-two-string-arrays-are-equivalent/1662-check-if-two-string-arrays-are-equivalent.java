@@ -1,7 +1,7 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        Map<Character, Integer> map1 = new HashMap<>();
-        Map<Character, Integer> map2 = new HashMap<>();
+        //Map<Character, Integer> map1 = new HashMap<>();
+        //Map<Character, Integer> map2 = new HashMap<>();
         
         
         StringBuilder sb1 = new StringBuilder();
