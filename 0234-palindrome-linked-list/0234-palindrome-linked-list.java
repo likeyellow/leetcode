@@ -10,20 +10,21 @@
  */
 class Solution {
     
-    private ListNode front;
+    private ListNode frontNode;
     
     private boolean recur(ListNode currentNode) {
         if(currentNode != null) {
             if(!recur(currentNode.next)) return false;
-            if(currentNode.val != front.val) return false;
-            front = front.next;
+            if(currentNode.val != frontNode.val) return false;
+            
+            frontNode = frontNode.next;
         }
         return true;
     }
     
     
     public boolean isPalindrome(ListNode head) {
-        front = head;
+        frontNode = head;
         return recur(head);
     }
 }
