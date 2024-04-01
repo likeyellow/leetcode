@@ -12,10 +12,10 @@ class Solution {
     
     private ListNode front;
     
-    private boolean recur(ListNode current) {
-        if(current != null) {
-            if(!recur(current.next)) return false;
-            if(current.val != front.val) return false;
+    private boolean recur(ListNode currentNode) {
+        if(currentNode != null) {
+            if(!recur(currentNode.next)) return false;
+            if(currentNode.val != front.val) return false;
             front = front.next;
         }
         return true;
