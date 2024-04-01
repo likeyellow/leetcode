@@ -6,10 +6,10 @@ class Solution {
             char ch = s.charAt(i);
             
             if(ch == ']') {
-                List<Character> decode = new ArrayList<>();
+                List<Character> decodeList = new ArrayList<>();
                 
                 while(stack.peek() != '[') {
-                    decode.add(stack.pop());
+                    decodeList.add(stack.pop());
                 }
                 // pop [ from the stack
                 stack.pop();
@@ -24,8 +24,8 @@ class Solution {
                 
                 // pushing k times into stack
                 while(k != 0) {
-                    for(int j = decode.size() - 1; j >= 0; j--) {
-                        stack.push(decode.get(j));
+                    for(int j = decodeList.size() - 1; j >= 0; j--) {
+                        stack.push(decodeList.get(j));
                     }
                     k--;
                 }
