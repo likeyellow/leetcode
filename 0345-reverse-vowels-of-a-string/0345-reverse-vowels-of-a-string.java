@@ -22,6 +22,7 @@ class Solution {
             if(!isVowel(s.charAt(right))) {
                 right--;
             }
+            
             if(isVowel(s.charAt(left)) && isVowel(s.charAt(right))) {
                 char tmp = arr[left];
                 arr[left] = arr[right];
