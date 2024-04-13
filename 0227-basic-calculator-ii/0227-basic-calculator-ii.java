@@ -1,33 +1,33 @@
 class Solution {
     public int calculate(String s) {
         int ans = 0;
-        int nowNum = 0, lastNum = 0;
+        int lastNum = 0, totalNum = 0;
         char oper = '+';
         
         for(int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             
             if(Character.isDigit(ch)) {
-                nowNum = nowNum * 10 + (ch - '0');
+                lastNum = lastNum * 10 + (ch - '0');
             }
             if(!Character.isDigit(ch) && !Character.isWhitespace(ch) || i == s.length() -1) {
                 if(oper == '+') {
-                    lastNum = nowNum;
-                    ans += lastNum;
+                    totalNum = lastNum;
+                    ans += totalNum;
                 } else if(oper == '-') {
-                    lastNum = -nowNum;
-                    ans += lastNum;
+                    totalNum = -lastNum;
+                    ans += totalNum;
                 } else if (oper == '*') {
-                    ans -= lastNum;
-                    lastNum *= nowNum;
-                    ans += lastNum;
+                    ans -= totalNum;
+                    totalNum *= lastNum;
+                    ans += totalNum;
                 } else if (oper == '/') {
-                    ans -= lastNum;
-                    lastNum /= nowNum;
-                    ans += lastNum;
+                    ans -= totalNum;
+                    totalNum /= lastNum;
+                    ans += totalNum;
                 } 
                 oper = ch;
-                nowNum = 0;
+                lastNum = 0;
             }
         }
         return ans;
