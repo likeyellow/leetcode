@@ -35,12 +35,13 @@ class Solution {
         return ans;
         */
         Queue<Integer> heap = new PriorityQueue<>((n1, n2) -> map.get(n1) - map.get(n2));   
-        System.out.print(heap);
         
         for(int key : map.keySet()) {
             heap.add(key);
             if(heap.size() > k) heap.poll();            
         }
+        //System.out.print(heap);
+        
         int[] ans = new int[k];
         for(int i = 0; i < k; i++) {
             ans[i] = heap.poll();
